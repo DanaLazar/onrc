@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a:hover {
+  text-decoration: none!important;
+}
+
+.main .autofit-section {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+.main .card-title {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.main span {
+  display: block;
+}
+
+.main .small {
+  font-size: 50%;
+}
+
+.active::after {
+  background-color: #80acff;
+    bottom: -0.5rem;
+    content: "";
+    display: block;
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: auto;
+}
+
+.navbar-toggler.collapsed svg {
+  fill: #fff;
+  font-size: 20px;
+}

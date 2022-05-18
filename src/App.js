@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Despre from './pagini/Despre';
+import Media from './pagini/Media';
+import Contact from './pagini/Contact';
+import Statistici from './pagini/Statistici';
+import Legislatie from './pagini/Legislatie';
+import Personal from './pagini/Personal';
+import Public from './pagini/Public';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Header />
+      <main className="container-fluid container-fluid-max-md">
+        
+          <Routes>
+            <Route path="/despre" element={<Despre />} />
+            <Route path="/" element={<Statistici/>} />
+            <Route path="/legislatie" element={<Legislatie />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="/personal" element={<Personal />} />
+            <Route path="/public" element={<Public />} />
+            <Route path="/contact" element={<Contact />} />  
+            <Route path="*" element={<Statistici/>} />        
+        </Routes>
+        
+      </main>
+      <Footer />
     </div>
   );
 }
