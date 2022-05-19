@@ -7,7 +7,7 @@ import { data } from '../util/data';
 // eslint-disable-next-line react/prop-types
 const Table = ({an, luna, id}) => {
    const saveFile = (name) => {
-    FileSaver.saveAs(`${process.env.PUBLIC_URL}${name}`, name);
+    FileSaver.saveAs(`${process.env.PUBLIC_URL}/${name}`, name);
   };
   
   return (
@@ -28,7 +28,7 @@ const Table = ({an, luna, id}) => {
                     <ClayTable.Row key={item.an + item.luna}>
                         <ClayTable.Cell headingTitle>{item.an}</ClayTable.Cell>
                         <ClayTable.Cell>{item.luna}</ClayTable.Cell>
-                        <ClayTable.Cell onClick={()=>saveFile(item.id + item.an + item.luna+'.xls')}>
+                        <ClayTable.Cell onClick={()=>saveFile(item.id + item.an + item.luna + '.xls')}>
                           <ClayLink displayType="secondary">
                             {".xls "}<CgSoftwareDownload/>
                           </ClayLink>
