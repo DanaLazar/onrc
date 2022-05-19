@@ -1,16 +1,15 @@
 import FileSaver from "file-saver";
 import ClayTable from '@clayui/table';
-import ClayIcon from '@clayui/icon';
+import { CgSoftwareDownload } from "react-icons/cg";
 import ClayLink from '@clayui/link';
 import { data } from '../util/data';
-const spritemap = "/icons.svg";
 
 // eslint-disable-next-line react/prop-types
 const Table = ({an, luna, id}) => {
    const saveFile = (name) => {
-    FileSaver.saveAs(`${process.env.PUBLIC_URL}/files/${name}`, name);
+    FileSaver.saveAs(`${process.env.PUBLIC_URL}${name}`, name);
   };
-  console.log(id)
+  
   return (
     <ClayTable>
       <ClayTable.Head>
@@ -24,18 +23,19 @@ const Table = ({an, luna, id}) => {
       {
         data.map((item) => {
             if (item.id === id && item.an === an && (item.luna === luna || luna === '')) {
-                console.log('adevarat')
+                
                 return (
                     <ClayTable.Row key={item.an + item.luna}>
                         <ClayTable.Cell headingTitle>{item.an}</ClayTable.Cell>
                         <ClayTable.Cell>{item.luna}</ClayTable.Cell>
                         <ClayTable.Cell onClick={()=>saveFile(item.id + item.an + item.luna+'.xls')}>
                           <ClayLink displayType="secondary">
-                            {".xls "}<ClayIcon symbol="download" spritemap={spritemap} />
+                            {".xls "}<CgSoftwareDownload/>
                           </ClayLink>
                         </ClayTable.Cell>
                     </ClayTable.Row>                 
         )}   
+        return null;
             })
       }
       </ClayTable.Body>

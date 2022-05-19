@@ -1,10 +1,10 @@
 import React from 'react';
 import ClayLink from '@clayui/link';
+import Flag from 'react-world-flags';
+import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import logo from '../assets/images/onrc_65.png';
-import ClayIcon from '@clayui/icon';
 import Navigation from './Navigation';
 import ToolBar from './ToolBar';
-const spritemap = "/icons.svg";
 
 function Header() {
   
@@ -20,14 +20,14 @@ function Header() {
               </div>
             </div>
             <div className="util">
-              <div className="util-icon d-flex flex-row justify-content-around">
+              <div className="util-icon d-flex justify-content-around">
                 <div className="social">
-                  <ClayLink href="#"><ClayIcon className="mr-2 text-primary" symbol="social-facebook" spritemap={spritemap} /></ClayLink>
-                  <ClayLink href="#"><ClayIcon className="mr-2 text-primary" symbol="video" spritemap={spritemap} /></ClayLink>
+                  <ClayLink href="#"><FaFacebookSquare className="mr-2 text-primary"/></ClayLink>
+                  <ClayLink href="#"><FaYoutube className="mr-2 text-primary"/></ClayLink>
                 </div>
-                <div className="language">
-                  <ClayLink href="#"><ClayIcon className="mr-2" symbol="ro-ro" spritemap={spritemap} /></ClayLink>
-                  <ClayLink href="#"><ClayIcon className="mr-2" symbol="en-gb" spritemap={spritemap} /></ClayLink>
+                <div className="language d-flex flex-row justify-content-start flex-wrap">
+                  <ClayLink href="#"><Flag code="ro" className="mr-2"/></ClayLink>
+                  <ClayLink href="#"><Flag code="gb" className="mr-2"/></ClayLink>
                 </div>
               </div>
               <div className="cauta d-none d-md-block">

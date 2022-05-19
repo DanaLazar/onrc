@@ -3,7 +3,7 @@ import React from 'react'
 
 const Despre = () => {
   return (
-    <div>Despre ce vorbim astazi</div>
+    <div className='page'>Despre</div>
   )
 }
 

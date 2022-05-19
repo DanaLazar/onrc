@@ -2,7 +2,7 @@ import React from 'react'
 
 const Legislatie = () => {
   return (
-    <div>Legislatie</div>
+    <div className='page'>Legislatie</div>
   )
 }
 

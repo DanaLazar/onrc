@@ -7,10 +7,12 @@ const Statistici = () => {
   const [ctxid, setId] = useState(239);
   const value = { ctxid, setId };
   return (
-    <StatContext.Provider value={value}>
+    <div className="page">
+      <StatContext.Provider value={value}>
           <MainImg />
           <Statistics />
-    </StatContext.Provider>
+      </StatContext.Provider>
+    </div>
   )
 }
 

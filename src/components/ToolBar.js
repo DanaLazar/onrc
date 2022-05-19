@@ -1,8 +1,8 @@
 import React from 'react'
-import {ClayButtonWithIcon} from '@clayui/button';
+import { FaSearch } from "react-icons/fa";
 import {ClayInput} from '@clayui/form';
 import ClayManagementToolbar from '@clayui/management-toolbar';
-const spritemap = "/icons.svg";
+
 
 const ToolBar = () => {
   return (
@@ -18,16 +18,14 @@ const ToolBar = () => {
                 type="text"
               />
               <ClayInput.GroupInsetItem after tag="span">
-                <ClayButtonWithIcon
+                <FaSearch
                   className="navbar-breakpoint-d-none"
                   displayType="unstyled"
-                  spritemap={spritemap}
                   symbol="times"
                 />
-                <ClayButtonWithIcon
+                <FaSearch
+                  className="text-primary"
                   displayType="unstyled"
-                  spritemap={spritemap}
-                  symbol="search"
                   type="submit"
                 />
               </ClayInput.GroupInsetItem>

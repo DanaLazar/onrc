@@ -2,10 +2,9 @@ import { useContext } from "react";
 import img from '../assets/images/main.svg';
 import ClayCard from '@clayui/card';
 import ClayLink from '@clayui/link';
-import ClayIcon from '@clayui/icon';
+import { FaCircle } from "react-icons/fa";
 import { data } from '../util/data';
-import { StatContext } from '../util/Context'
-const spritemap = "/icons.svg";
+import { StatContext } from '../util/Context';
 
 const MainImg = () => {
   
@@ -46,8 +45,9 @@ const MainImg = () => {
                   output.map((item)=>{
                       return(
                           <span className="mb-2" key={item[0]}>
+                          
                             <ClayLink displayType="secondary" onClick={()=>handleClick(item[0])}>
-                              <ClayIcon className="mr-2 small text-primary" symbol="circle" spritemap={spritemap} />{item[1]}
+                               <FaCircle className="small text-primary mr-2" />{item[1]}
                             </ClayLink>
                           </span>
                       )

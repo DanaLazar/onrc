@@ -2,7 +2,7 @@ import React from 'react'
 
 const Public = () => {
   return (
-    <div>Public</div>
+    <div className='page'>Public</div>
   )
 }
 
